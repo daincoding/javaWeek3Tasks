@@ -11,6 +11,8 @@ public class Computer {
     private double screenSizeInches;
     private String computerType;
     private boolean hasOS;
+    private double purchasePrice;
+    private double sellingPrice;
 
     //endregion
 
@@ -50,6 +52,22 @@ public class Computer {
         this.screenSizeInches = screenSizeInches;
         this.computerType = computerType;
         this.hasOS = hasOS;
+    }
+
+    // 4) Constructor for Part III of the task
+
+    public Computer(String manufacturer, int processorSpeedMHz, int ramGB, int hardDriveGB,
+                    int usbPorts, double screenSizeInches, String computerType, boolean hasOS, double purchasePrice, double sellingPrice) {
+        this.manufacturer = manufacturer;
+        this.processorSpeedMHz = processorSpeedMHz;
+        this.ramGB = ramGB;
+        this.hardDriveGB = hardDriveGB;
+        this.usbPorts = usbPorts;
+        this.screenSizeInches = screenSizeInches;
+        this.computerType = computerType;
+        this.hasOS = hasOS;
+        this.purchasePrice = purchasePrice;
+        this.sellingPrice = sellingPrice;
     }
 
     //endregion
@@ -120,5 +138,45 @@ public class Computer {
         this.hasOS = hasOS;
     }
 
+    public double getPurchasePrice() {
+        return purchasePrice;
+    }
+
+    public void setPurchasePrice(double purchasePrice) {
+        this.purchasePrice = purchasePrice;
+    }
+
+    public double getSellingPrice() {
+        return sellingPrice;
+    }
+
+    public void setSellingPrice(double sellingPrice) {
+        this.sellingPrice = sellingPrice;
+    }
+
     //endregion
+
+    @Override
+    public String toString() {
+        return "The Computer has the following parameters:\n" +
+                "\tManufacturer='" + manufacturer + '\'' +
+                "\n\t ProcessorSpeedMHz=" + processorSpeedMHz +
+                "\n\t RamGB=" + ramGB +
+                "\n\t HardDriveGB=" + hardDriveGB +
+                "\n\t UsbPorts=" + usbPorts +
+                "\n\t ScreenSizeInches=" + screenSizeInches +
+                "\n\t ComputerType='" + computerType + '\'' +
+                "\n\t hasOS=" + hasOS;
+    }
+
+    public void doubleRAM() {
+        int current = getRamGB();
+        int upgrade = current * 2;
+        setRamGB(upgrade);
+    }
+
+    public double calculatedProfit() {
+        double profit = purchasePrice - sellingPrice;
+        return profit;
+    }
 }
