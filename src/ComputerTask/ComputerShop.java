@@ -10,14 +10,6 @@ public class ComputerShop {
         this.computers = computers;
     }
 
-    public ArrayList<Computer> getComputers() {
-        return computers;
-    }
-
-    public void setComputers(ArrayList<Computer> computers) {
-        this.computers = computers;
-    }
-
     //Calculate Profit
     public double calculateProfit() {
         double totalProfit = 0.0;

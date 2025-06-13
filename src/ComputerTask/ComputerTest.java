@@ -30,7 +30,7 @@ public class ComputerTest {
         Computer pc4 = new Computer("Asus", 3000, 16, 512, 4, 15.6, "Laptop", true, 580.00, 829.99);
         Computer pc5 = new Computer("Acer", 2500, 8, 256, 2, 13.3, "Laptop", true, 450.00, 699.99);
 
-        ArrayList<Computer> computers = new ArrayList<Computer>();
+        ArrayList<Computer> computers = new ArrayList<>();
         computers.add(pc1);
         computers.add(pc2);
         computers.add(pc3);
